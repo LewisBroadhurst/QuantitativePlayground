@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# analytics
+analytics_venv
+
+# web-scraping
+web_scraping_venv
