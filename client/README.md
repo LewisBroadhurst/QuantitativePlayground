@@ -8,3 +8,4 @@
 - Metatrader account display
 - Execute trades via REST/FIX w/ risk calculator, this could actually be a really great idea.
     - Create the Metatrader assistants built into the web
+    - Trade Copier
