@@ -9,3 +9,7 @@
 - Execute trades via REST/FIX w/ risk calculator, this could actually be a really great idea.
     - Create the Metatrader assistants built into the web
     - Trade Copier
+    - Add an institutional touch. Yield profiles to see how long it takes for a trade to go profitable.
+        - If after 10 mins 90% of trades tend to SL, close at 10mins.
+        - Monte Carlo Simulations
+        - Will need detailed explanations for how these will work, get into the udemy course and see how they can be applied
