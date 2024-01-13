@@ -23,8 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# analytics
-analytics_venv
-
-# web-scraping
-web_scraping_venv
+# server venv
+venv
+coinbase_cloud_api_key_general.json
+coinbase_cloud_api_key_trading.json
+.env
