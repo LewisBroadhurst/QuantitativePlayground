@@ -1,5 +1,6 @@
 export default function Header() {
-    return <header>
-        <h1>Header</h1>
+
+    return <header className="bg-slate-700 p-4">
+        <h1 className="text-white">Finance Dashboard</h1>
     </header>
 }

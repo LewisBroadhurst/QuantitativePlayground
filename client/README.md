@@ -18,3 +18,8 @@
 - Run a backtest then see progression of backtest via dashboard.
 - Can then view that dashboard at a later date.
 - Implement a message cue for this.
+
+## Plotting charts
+- ACtaully really easy. 
+- Get data from API call to python BE.
+- Use plotly.js etc and put data into plotly.
