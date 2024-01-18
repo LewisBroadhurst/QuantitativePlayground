@@ -18,7 +18,7 @@ export default function StatisticPanel() {
     const [statistics, setStatistics] = useState();
 
     useEffect(() => {
-        fetch(`https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=xGv4EZVS4iAG_OuxL0PCRpRy7_drjpwZ`)
+        fetch(`https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey={process.env.POLYGON_API_KEY}`)
             .then(res => res.json())
             .then(data => setStatistics(data))
             .catch(err => console.error(err))
