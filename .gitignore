@@ -28,3 +28,4 @@ venv
 coinbase_cloud_api_key_general.json
 coinbase_cloud_api_key_trading.json
 .env
+secrets.py
