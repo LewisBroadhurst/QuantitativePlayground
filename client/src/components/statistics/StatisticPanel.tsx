@@ -15,14 +15,14 @@ import { useEffect, useState } from "react"
 export default function StatisticPanel() {
 
     const [ticker, setTicker] = useState<string>("AAPL");
-    const [statistics, setStatistics] = useState();
+    // const [statistics, setStatistics] = useState();
 
-    useEffect(() => {
-        fetch(`https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey={process.env.POLYGON_API_KEY}`)
-            .then(res => res.json())
-            .then(data => setStatistics(data))
-            .catch(err => console.error(err))
-    }, [])
+    // useEffect(() => {
+    //     fetch(`https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey={process.env.POLYGON_API_KEY}`)
+    //         .then(res => res.json())
+    //         .then(data => setStatistics(data))
+    //         .catch(err => console.error(err))
+    // }, [])
 
 
     return <article className="flex flex-col gap-10 p-4 bg-slate-100">
