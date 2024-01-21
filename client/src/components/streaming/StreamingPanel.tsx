@@ -1,4 +1,6 @@
 import { io } from "socket.io-client";
+import CandlestickPlot from "../charts/CandlestickPlot";
+
 
 export default function StreamingPanel() {
 
@@ -63,8 +65,8 @@ export default function StreamingPanel() {
     return <section className="p-4 bg-slate-50 flex flex-col gap-4" >
         <h1 className="text-2xl underline">Streaming Panel</h1>
 
-        <section>
-
+        <section className="flex flex-col">
+            <CandlestickPlot />
         </section>
 
         <button
