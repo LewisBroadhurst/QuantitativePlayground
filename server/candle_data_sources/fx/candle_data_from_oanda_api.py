@@ -6,7 +6,7 @@ import datetime as dt
 from dateutil import parser
 
 
-class OandaApi:
+class CandleDataFromOandaApi:
 
     def __init__(self):
         self.session = requests.Session()

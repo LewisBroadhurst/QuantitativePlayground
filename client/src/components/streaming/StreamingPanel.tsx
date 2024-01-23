@@ -82,11 +82,16 @@ export default function StreamingPanel() {
             {Boolean(eurusdPrice) && <pre>{JSON.stringify(eurusdPrice, null, 2)}</pre>}
         </section>
 
-        <button
-            className="bg-blue-500 text-white px-4 py-2 rounded-sm self-start"
-            onClick={handleStreamClick}
-        >
-            Start Stream
-        </button>
+        <section className="flex flex-row gap-2 items-center">
+            <button
+                className="bg-blue-500 text-white px-4 py-2 rounded-sm self-start"
+                onClick={handleStreamClick}
+            >
+                Start EURUSD Stream
+            </button>
+
+            {/* @ts-ignore */}
+            <span>{eurusdPrice?.bids[0] ? 'ON' : 'OFF'}</span>
+        </section>
     </section >
 }

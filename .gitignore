@@ -30,3 +30,5 @@ coinbase_cloud_api_key_trading.json
 .env
 secrets.py
 client\pnpm-lock.yaml
+**.pkl
+useful_info.md
