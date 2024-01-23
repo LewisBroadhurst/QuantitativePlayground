@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TradingEngine.Core.TradingEngineServerConfiguration
+namespace TradingEngine.Core.Configuration
 {
-    internal class TradingEngineServerConfiguration
+    class TradingEngineServerConfiguration
     {
     }
 }
