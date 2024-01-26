@@ -1,17 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using TradingEngine.Core.Configuration;
 
+// This is the service that will run indefinitely for our TradingEngine
 namespace TradingEngine.Core
 {
-    public sealed class TradingEnginerServerHostBuilder
+    public sealed class TradingEngineServerHostBuilder
     {
-        public static IHost BuildTradingEnginerServer()
+        public static IHost BuildTradingEngineServer()
             => Host.CreateDefaultBuilder().ConfigureServices((context, services) =>
             {
                 // context allows us to index into our configuration
@@ -20,7 +17,12 @@ namespace TradingEngine.Core
                 services.AddOptions();
                 services.Configure<TradingEngineServerConfiguration>(context.Configuration.GetSection(nameof(TradingEngineServerConfiguration)));
 
+                // singleton objects?
+                // Add singleton objects...
+                services.AddSingleton<ITradingEngineServer, TradingEngineServer>();
 
+                // Add hosted service
+                services.AddHostedService<TradingEngineServer>();
             }).Build();
 
     }
