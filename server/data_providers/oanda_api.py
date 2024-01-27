@@ -1,23 +1,31 @@
+import os
+from dotenv import load_dotenv
 import requests
 import pandas as pd
 import json
-from constants.secrets import API_KEY, OANDA_URL
 import datetime as dt
 from dateutil import parser
 
+load_dotenv()
+api_key = os.getenv('OANDA_API_KEY')
+account_id = os.getenv('OANDA_ACCOUNT_ID')
+oanda_url = os.getenv('OANDA_URL')
+oanda_stream_url = os.getenv('OANDA_STREAM_URL')
+headers = os.getenv('OANDA_SECURE_HEADER')
 
-class CandleDataFromOandaApi:
+
+class OandaApi:
 
     def __init__(self):
         self.session = requests.Session()
         self.session.headers.update({
-            "Authorization": f"Bearer {API_KEY}",
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
         })
 
 
     def make_request(self, url, params=None, data=None, headers=None):
-        full_url = f"{OANDA_URL}/{url}"
+        full_url = f"{oanda_url}/{url}"
 
         if data is not None:
             data = json.dumps(data)
