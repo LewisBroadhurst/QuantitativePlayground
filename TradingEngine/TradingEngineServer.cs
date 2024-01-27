@@ -5,19 +5,20 @@ using Microsoft.Extensions.Options;
 using System;
 
 using TradingEngine.Core.Configuration;
+using TradingEngineServer.Logging;
 
 namespace TradingEngine.Core
 {
     // inheriting from ITradingEngineServer, which means it must override its methods
     sealed class TradingEngineServer : BackgroundService, ITradingEngineServer
     {
-        private readonly ILogger<TradingEngineServer> _logger;
-        private readonly TradingEngineServerConfiguration _tradingEngineConfiguration;
+        private readonly IOptions<TradingEngineServerConfiguration> _engineConfiguration;
+        private readonly ITextLogger _logger;
 
-        public TradingEngineServer(ILogger<TradingEngineServer> logger, IOptions<TradingEngineServerConfiguration> config) 
+        public TradingEngineServer(IOptions<TradingEngineServerConfiguration> engineConfiguration, ILogger<TradingEngineServer> logger) 
         {
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _tradingEngineConfiguration = config.Value ?? throw new ArgumentNullException(nameof(config));
+            _engineConfiguration = engineConfiguration ?? throw new ArgumentNullException(nameof(engineConfiguration));
+            _logger = textLogger ?? throw new ArgumentNullException(nameof(textLogger));
         }
 
         // Task represents a long running operation

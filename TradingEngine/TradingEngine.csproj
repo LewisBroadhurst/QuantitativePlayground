@@ -14,4 +14,8 @@
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LoggingCS\LoggingCS.csproj" />
+  </ItemGroup>
+
 </Project>

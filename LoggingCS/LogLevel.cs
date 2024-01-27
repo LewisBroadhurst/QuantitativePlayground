@@ -1,7 +1,10 @@
-﻿namespace LoggingCS
+﻿namespace TradingEngineServer.Logging
 {
-    public class Class1
+    public enum LogLevel
     {
-
+        Debug,
+        Info,
+        Warn,
+        Error,
     }
 }

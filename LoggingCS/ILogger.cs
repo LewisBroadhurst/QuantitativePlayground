@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// This is our logging interface
 namespace TradingEngine.Logging
 {
     internal interface ILogger
