@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 import json
 import requests
+from data_providers.oanda.classes.stream_price_api import StreamApiPrice
 
 load_dotenv()
 api_key = os.getenv('OANDA_API_KEY')
@@ -28,5 +29,6 @@ def stream_prices(pairs_list):
     for price in response.iter_lines():
         if price:
             decoded_price = json.loads(price.decode('utf-8'))
-            print(decoded_price)
-            print()
+            
+            if 'type' in decoded_price and decoded_price['type'] == 'PRICE':
+                print(StreamApiPrice(decoded_price))

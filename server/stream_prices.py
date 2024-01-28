@@ -1,6 +1,7 @@
 import os
-from data_providers.oanda_api import OandaApi
-from pricing_streams.oanda.oanda_stream_prices import stream_prices
+from data_providers.oanda.classes.oanda_api import OandaApi
+from data_providers.oanda.classes.stream_price_api import StreamApiPrice
+from server.data_providers.oanda.streaming.oanda_stream_prices import stream_prices
 
 ### The file where this is run from, is the point at which everything else should reference
 ### This is why there are issues when trying to run the application from specific folders. 
