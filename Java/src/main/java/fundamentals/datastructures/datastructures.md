@@ -25,5 +25,19 @@ memory efficient.
 - ArrayList is not synchronized, meaning it is not thread-safe.
 
 ```java
-
+ArrayList<int> cryptocurrencies = new ArrayList<>();
 ```
+
+##### LinkedList
+- Dynamic sizing, can grow or shrink on demand. Memory efficient.
+- Each element in a list contains data and a reference to the previous/next node.
+- Faster insertion/deletion vs. ArrayList as only one element and references to that
+element need to be replaced, rather than shifting multiple elements.
+- Higher memory overhead vs. ArrayList as need to store the references.
+- Not synchronized, meaning it is not thread-safe.
+
+```java
+LinkedList<int> cryptocurrencies = new LinkedList<>();
+```
+
+##### Vector

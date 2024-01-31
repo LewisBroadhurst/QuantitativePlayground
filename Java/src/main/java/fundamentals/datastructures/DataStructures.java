@@ -1,9 +1,6 @@
 package fundamentals.datastructures;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 class Vehicle {
     protected String brand = "Ford";
@@ -55,6 +52,7 @@ public class DataStructures {
         cryptocurrency.printInstrument();
 
         ArrayList<Cryptocurrency> cryptocurrencies = new ArrayList<>(List.of(cryptocurrency, cryptocurrency, cryptocurrency));
+        LinkedList<Cryptocurrency> cryptos = new LinkedList<>(List.of(cryptocurrency, cryptocurrency, cryptocurrency));
         cryptocurrencies.set(0, null);
 
         // enhanced for loop
