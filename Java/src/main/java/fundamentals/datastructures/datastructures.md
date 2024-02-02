@@ -40,4 +40,24 @@ element need to be replaced, rather than shifting multiple elements.
 LinkedList<int> cryptocurrencies = new LinkedList<>();
 ```
 
-##### Vector
+##### Vector & Stack
+- Not typically used in modern Java, legacy DS.
+
+##### Queue
+- Follows FIFO (first in first out).
+- Supports Enqueue (Adding) and Dequeue (Removing)
+- LinkedBlockingQueue useful for concurrent programming
+
+###### PriorityQueue
+* PriorityQueue is an implementation of the Queue interface but adds the concept of priorities.
+* Elements are ordered based on their natural order or a specified comparator during insertion.
+* The element with the highest priority (smallest according to the specified ordering) is the first to be removed.
+
+##### Deque (Double ended Queue)
+- Able to add/remove elements to/from both ends of the queue
+- Uses stack and Queue methods
+
+###### ArrayDeque
+ArrayDeque is a specific implementation of the Deque interface.
+Internally, ArrayDeque uses a dynamically resizable array to store elements.
+It provides constant time for adding or removing elements from both ends, making it a good choice for general-purpose deque operations.
