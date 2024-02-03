@@ -61,3 +61,23 @@ LinkedList<int> cryptocurrencies = new LinkedList<>();
 ArrayDeque is a specific implementation of the Deque interface.
 Internally, ArrayDeque uses a dynamically resizable array to store elements.
 It provides constant time for adding or removing elements from both ends, making it a good choice for general-purpose deque operations.
+
+#### Set
+Extends the collection class.
+- All elements are unique
+- No specific order to a set. Therefore, no indexing to access elements.
+- Several implementation methods.
+- Typically, do not allow for null values.
+
+##### SortedSet
+- Ordered Set
+- Has head and tail operations
+
+##### HashSet
+- Uses a Hash Table for storage.
+- No order guarantee or duplicates.
+- Fast operations.
+
+##### LinkedHashSet
+- Ordered, backed by linkedlist, no duplicates.
+- Hybrid between HashSet and LinkedList.
