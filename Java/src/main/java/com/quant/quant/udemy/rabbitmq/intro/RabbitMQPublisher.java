@@ -23,7 +23,12 @@ public class RabbitMQPublisher {
         String message = "Hello RabbitMQ!";
 
         channel.basicPublish("", "TestQueue", null, message.getBytes());
+        channel.basicPublish("", "TestQueue", null, message.getBytes());
+        channel.basicPublish("", "TestQueue", null, message.getBytes());
+        channel.basicPublish("", "TestQueue", null, message.getBytes());
 
+
+        // Clean up
         channel.close();
         connection.close();
     }
