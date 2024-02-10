@@ -89,8 +89,6 @@ if __name__ == "__main__":
         sorted_df.reset_index(drop=True, inplace=True)
         pickle.dump(sorted_df, file)
         
-        print(sorted_df.head())
-        
     print("Data successfully pickled. Yum.")
         
         
