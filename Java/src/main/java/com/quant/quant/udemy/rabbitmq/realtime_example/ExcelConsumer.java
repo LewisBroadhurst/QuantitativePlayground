@@ -1,4 +1,4 @@
-package com.quant.quant.udemy.rabbitmq.intro.realtime_example;
+package com.quant.quant.udemy.rabbitmq.realtime_example;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

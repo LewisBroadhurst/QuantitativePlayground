@@ -1,4 +1,4 @@
-package com.quant.quant.udemy.rabbitmq.introduction;
+package com.quant.quant.udemy.rabbitmq.direct_exchange;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -8,10 +8,10 @@ import com.rabbitmq.client.DeliverCallback;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
-public class RabbitMQConsumer {
+public class MobileConsumer {
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        System.out.println("Starting RabbitMQ Consumer!");
+        System.out.println("Starting RabbitMQ Mobile Consumer!");
 
         ConnectionFactory factory = new ConnectionFactory();
         Connection connection = factory.newConnection();
@@ -22,9 +22,6 @@ public class RabbitMQConsumer {
             System.out.println("Received message: " + message);
         };
 
-        channel.basicConsume("TestQueue", true, deliverCallback, consumerTag -> {});
-
-        // Note as we do not close the connections here, the consumer will keep running
+        channel.basicConsume("Mobile", true, deliverCallback, consumerTag -> {});
     }
-
 }

@@ -1,4 +1,4 @@
-package com.quant.quant.udemy.rabbitmq.intro;
+package com.quant.quant.udemy.rabbitmq.introduction;
 
 
 import com.rabbitmq.client.Channel;
