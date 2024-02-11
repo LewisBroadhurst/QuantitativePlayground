@@ -54,7 +54,7 @@
   <component name="RunManager">
     <configuration name="QuantApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="quant" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.quant.quant.QuantApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.x.quant.QuantApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
